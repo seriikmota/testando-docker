@@ -1,0 +1,5 @@
+services:
+  - type: docker
+    name: app
+    env: production
+    dockerComposeFilePath: ./docker-compose.yml
