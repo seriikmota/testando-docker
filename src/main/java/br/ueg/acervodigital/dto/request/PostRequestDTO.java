@@ -1,7 +1,8 @@
 package br.ueg.acervodigital.dto.request;
 
-import br.ueg.acervodigitalarquitetura.dto.DTOFile;
-import br.ueg.acervodigitalarquitetura.dto.FileDTO;
+import br.ueg.genericarchitecture.annotation.MandatoryField;
+import br.ueg.genericarchitecture.dto.DTOFile;
+import br.ueg.genericarchitecture.dto.FileDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,11 +17,25 @@ import java.util.List;
 @AllArgsConstructor
 public class PostRequestDTO implements DTOFile {
     private Long id;
+
+    @MandatoryField(name = "título")
     private String title;
+
+    @MandatoryField(name = "subtitulo")
     private String subtitle;
+
+    @MandatoryField(name = "conteúdo")
     private String content;
+
+    @MandatoryField(name = "aprovação")
     private Boolean approval;
+
+    @MandatoryField(name = "data de publicação")
     private LocalDateTime publicationDate;
+
+    @MandatoryField(name = "etiqueta")
     private String tag;
+
+    @MandatoryField(name = "imagem(ns)")
     private List<FileDTO> files;
 }

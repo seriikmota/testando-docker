@@ -4,7 +4,7 @@ import br.ueg.acervodigital.dto.list.PostListDTO;
 import br.ueg.acervodigital.dto.request.PostRequestDTO;
 import br.ueg.acervodigital.dto.response.PostResponseDTO;
 import br.ueg.acervodigital.entities.Post;
-import br.ueg.acervodigitalarquitetura.mapper.GenericMapper;
+import br.ueg.genericarchitecture.mapper.GenericMapper;
 import org.mapstruct.*;
 
 @Mapper(

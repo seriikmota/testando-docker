@@ -1,8 +1,8 @@
 package br.ueg.acervodigital.exception;
 
 import br.ueg.acervodigital.enums.ErrorEnum;
-import br.ueg.acervodigitalarquitetura.exception.ApiResponseExceptionHandler;
-import br.ueg.acervodigitalarquitetura.exception.MessageResponse;
+import br.ueg.genericarchitecture.exception.ApiResponseExceptionHandler;
+import br.ueg.genericarchitecture.exception.MessageResponse;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

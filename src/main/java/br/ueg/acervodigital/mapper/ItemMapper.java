@@ -4,7 +4,7 @@ import br.ueg.acervodigital.dto.list.ItemListDTO;
 import br.ueg.acervodigital.dto.request.ItemRequestDTO;
 import br.ueg.acervodigital.dto.response.ItemResponseDTO;
 import br.ueg.acervodigital.entities.Item;
-import br.ueg.acervodigitalarquitetura.mapper.GenericMapper;
+import br.ueg.genericarchitecture.mapper.GenericMapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.NullValueCheckStrategy;
 import org.mapstruct.NullValuePropertyMappingStrategy;

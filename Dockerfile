@@ -9,7 +9,7 @@ COPY pom.xml .
 
 RUN yum install git -y
 RUN head -c 5 /dev/random > random_bytes && git clone https://github.com/seriikmota/generic-architecture.git
-RUN head -c 5 /dev/random > random_bytes && cd generic-architecture && git checkout main && mvn dependency:go-offline && mvn clean install -Dmaven.test.skip=true && cd ..
+RUN head -c 5 /dev/random > random_bytes && cd generic-architecture && git checkout master && mvn dependency:go-offline && mvn clean install -Dmaven.test.skip=true && cd ..
 
 # Preload dependencies
 RUN mvn dependency:go-offline

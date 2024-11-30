@@ -4,10 +4,10 @@ import br.ueg.acervodigital.entities.User;
 import br.ueg.acervodigital.entities.UserLog;
 import br.ueg.acervodigital.repository.UserLogRepository;
 import br.ueg.acervodigital.repository.UserRepository;
-import br.ueg.acervodigitalarquitetura.dto.CredentialDTO;
-import br.ueg.acervodigitalarquitetura.enums.ApiErrorEnum;
-import br.ueg.acervodigitalarquitetura.exception.BusinessException;
-import br.ueg.acervodigitalarquitetura.service.IUserProviderService;
+import br.ueg.genericarchitecture.dto.CredentialDTO;
+import br.ueg.genericarchitecture.enums.ApiErrorEnum;
+import br.ueg.genericarchitecture.exception.BusinessException;
+import br.ueg.genericarchitecture.service.IUserProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -74,7 +74,8 @@ public class UserProviderService implements IUserProviderService {
                 "ROLE_POST_READ",
                 "ROLE_POST_UPDATE",
                 "ROLE_POST_DELETE",
-                "ROLE_POST_LISTALL"
+                "ROLE_POST_LISTALL",
+                "ROLE_POST_TABLE_ALL"
         );
     }
 

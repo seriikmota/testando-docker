@@ -3,9 +3,9 @@ package br.ueg.acervodigital.service.validations.post;
 import br.ueg.acervodigital.entities.Post;
 import br.ueg.acervodigital.entities.PostImage;
 import br.ueg.acervodigital.enums.ErrorEnum;
-import br.ueg.acervodigitalarquitetura.enums.ValidationActionsEnum;
-import br.ueg.acervodigitalarquitetura.exception.Message;
-import br.ueg.acervodigitalarquitetura.validation.IValidations;
+import br.ueg.genericarchitecture.enums.ValidationActionsEnum;
+import br.ueg.genericarchitecture.exception.Message;
+import br.ueg.genericarchitecture.validation.IValidations;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package br.ueg.acervodigital.enums;
 
-import br.ueg.acervodigitalarquitetura.enums.MessageCode;
-import br.ueg.acervodigitalarquitetura.enums.MessageType;
+import br.ueg.genericarchitecture.enums.MessageCode;
+import br.ueg.genericarchitecture.enums.MessageType;
 import lombok.Getter;
 
 @Getter

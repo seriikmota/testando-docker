@@ -4,9 +4,10 @@ import br.ueg.acervodigital.controller.IItemController;
 import br.ueg.acervodigital.dto.list.ItemListDTO;
 import br.ueg.acervodigital.dto.request.ItemRequestDTO;
 import br.ueg.acervodigital.dto.response.ItemResponseDTO;
+import br.ueg.acervodigital.entities.Item;
 import br.ueg.acervodigital.mapper.ItemMapper;
 import br.ueg.acervodigital.service.impl.ItemService;
-import br.ueg.acervodigitalarquitetura.controller.impl.AbstractCrudFileController;
+import br.ueg.genericarchitecture.controller.impl.AbstractCrudFileController;
 import io.swagger.v3.oas.annotations.Operation;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("${api.version}/item")
-public class ItemController extends AbstractCrudFileController<ItemRequestDTO, ItemResponseDTO, ItemListDTO, ItemService, Long>
+public class ItemController extends AbstractCrudFileController<ItemRequestDTO, ItemResponseDTO, ItemListDTO, Item, ItemService, ItemMapper, Long>
         implements IItemController {
     @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
@@ -33,7 +34,7 @@ public class ItemController extends AbstractCrudFileController<ItemRequestDTO, I
 
     @GetMapping("/list")
     public ResponseEntity<Page<ItemListDTO>> listAllWithoutRole(Pageable pageable){
-        Page<ItemListDTO> listDTO = service.listAll(pageable);
+        Page<ItemListDTO> listDTO = service.listAll(pageable).map(obj -> mapper.toDTOList(obj));
         return ResponseEntity.ok(listDTO);
     }
 

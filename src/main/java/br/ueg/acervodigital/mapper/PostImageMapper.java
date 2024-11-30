@@ -2,7 +2,7 @@ package br.ueg.acervodigital.mapper;
 
 import br.ueg.acervodigital.dto.ImageDTO;
 import br.ueg.acervodigital.entities.PostImage;
-import br.ueg.acervodigitalarquitetura.dto.FileDTO;
+import br.ueg.genericarchitecture.dto.FileDTO;
 import org.mapstruct.*;
 
 import java.util.Base64;

@@ -1,6 +1,5 @@
 package br.ueg.acervodigital.repository;
 
-import br.ueg.acervodigital.entities.Item;
 import br.ueg.acervodigital.entities.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

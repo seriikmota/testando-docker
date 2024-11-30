@@ -14,6 +14,12 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     @Query("select i from Item i where upper(i.name) like upper(concat('%',:name,'%'))")
     List<Item> findByNameContaining(@Param("name") String name);
 
+    @Query("select i from Item i where upper(i.description) like upper(concat('%',:description,'%'))")
+    List<Item> findByDescriptionContaining(@Param("description") String description);
+
+    @Query("select i from Item i where upper(i.description) like upper(concat('%',:text,'%')) or upper(i.name) like upper(concat('%',:text,'%'))")
+    List<Item> findByDescriptionOrNameContaining(@Param("text") String text);
+
     @Query("select i from Item i where upper(i.collection) like upper(concat('%',:collection,'%'))")
     List<Item> findByCollectionContaining(@Param("collection") String collection);
 

@@ -1,6 +1,6 @@
 package br.ueg.acervodigital.entities;
 
-import br.ueg.acervodigitalarquitetura.domain.GenericModel;
+import br.ueg.genericarchitecture.domain.GenericModel;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -43,7 +43,7 @@ public class Post implements GenericModel<Long> {
     @Column(name = "subtitle")
     private String subtitle;
 
-    @Column(name = "content")
+    @Column(name = "content", length = 10000)
     private String content;
 
     @Column(name = "approval")
